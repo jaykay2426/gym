@@ -237,10 +237,15 @@
     align-items: center;
     width: 90%;
 }
+
+/* Image section */
 .image-section img {
     width: 95%;
     height: auto;
+    animation: slideInLeft 2s ease-out forwards;
 }
+
+/* Content section */
 .content-section {
     padding: 40px;
     max-width: 550px;
@@ -248,12 +253,15 @@
 .content-section h2 {
     font-size: 28px;
     margin-bottom: 20px;
+    animation: slideInRight 2s ease-out forwards;
 }
 .content-section p {
     font-size: 16px;
     line-height: 1.5;
     margin-bottom: 20px;
+    animation: slideInRight 2s ease-out forwards;
 }
+/* Icon section */
 .content-section .icon-section {
     display: flex;
     flex-direction: column;
@@ -263,6 +271,7 @@
     display: flex;
     align-items: flex-start;
     gap: 15px;
+    animation: slideInLeft 2s ease-out forwards;
 }
 .icon-item i {
     font-size: 28px;
@@ -279,7 +288,6 @@
     font-size: 13px;
     color: #555;
 }
-
 @media (min-width: 769px) {
     .container {
         display: flex;
@@ -292,10 +300,10 @@
         margin-right: auto; /* Added this to ensure centering */
         align-content: center;
         align-items: center;
-        width: 90%;
+        width: 100%;
     }
     .image-section img {
-        width: 95%;
+        width: 99%;
         height: auto;
     }
     .content-section {
@@ -341,19 +349,19 @@
 @media (min-width: 1024px) {
     .container {
         display: flex;
-        background-color: gold;
+        background-color: white;
         border-radius: 8px;
         overflow: hidden;
         box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.349);
-        max-width: 1450px;
+        max-width: 1500px;
         align-content: center;
-        margin-left: 100px; /* Adjusted for larger screens */
+        margin-left: 200px; /* Adjusted for larger screens */
         margin-right: auto;
         align-items: center;
-        width: 85%; /* Slightly adjusted width for larger screens */
+        width: 95%; /* Slightly adjusted width for larger screens */
     }
     .image-section img {
-        width: 95%;
+        width: 97%;
         height: auto;
     }
     .content-section {
@@ -396,89 +404,70 @@
     }
 }
 
+
 @media (max-width: 480px) {
     .container {
-        flex-direction: column; /* Stack elements vertically */
-        margin-left: 10px;      /* Reduce left margin */
-        width: 95%;            /* Full width */
-        box-shadow: none;       /* Optional: Remove shadow for simplicity */
-        padding: 10px;          /* Optional: Add padding if needed */
+        flex-direction: column;
+        margin-left: 10px;
+        width: 95%;
+        box-shadow: none;
+        padding: 10px;
     }
     .image-section img {
         width: 95%;
         height: auto;
     }
     .content-section {
-        padding: 20px;          /* Reduce padding */
-        max-width: 95%;        /* Full width */
+        padding: 20px;
+        max-width: 95%;
     }
     .content-section h2 {
-        font-size: 24px;        /* Slightly smaller heading */
+        font-size: 24px;
         margin-bottom: 15px;
     }
     .content-section p {
-        font-size: 14px;        /* Slightly smaller text */
+        font-size: 14px;
         line-height: 1.4;
         margin-bottom: 15px;
     }
     .content-section .icon-section {
-        gap: 15px;              /* Reduce gap between icon items */
+        gap: 15px;
     }
     .icon-section .icon-item {
-        gap: 10px;              /* Reduce gap between icon and text */
+        gap: 10px;
     }
     .icon-item i {
-        font-size: 24px;        /* Slightly smaller icons */
+        font-size: 24px;
     }
     .icon-item h4 {
-        font-size: 16px;        /* Slightly smaller icon titles */
+        font-size: 16px;
     }
     .icon-item p {
-        font-size: 12px;        /* Slightly smaller icon descriptions */
+        font-size: 12px;
     }
 }
 
-
-/* Define keyframes for sliding from the left */
-@keyframes slideInFromLeft {
-    0% {
+/* Keyframes for sliding in */
+@keyframes slideInLeft {
+    from {
         transform: translateX(-100%);
         opacity: 0;
     }
-    100% {
+    to {
         transform: translateX(0);
         opacity: 1;
     }
 }
 
-/* Define keyframes for sliding from the right */
-@keyframes slideInFromRight {
-    0% {
+@keyframes slideInRight {
+    from {
         transform: translateX(100%);
         opacity: 0;
     }
-    100% {
+    to {
         transform: translateX(0);
         opacity: 1;
     }
-}
-
-/* Apply animations to divs */
-.icon-item:nth-child(odd) {
-    animation: slideInFromLeft 1s ease-out forwards;
-}
-
-.icon-item:nth-child(even) {
-    animation: slideInFromRight 1s ease-out forwards;
-}
-
-/* Optional: Add a slight delay to create a staggered effect */
-.icon-item:nth-child(odd) {
-    animation-delay: 0.5s;
-}
-
-.icon-item:nth-child(even) {
-    animation-delay: 0.7s;
 }
 
 
