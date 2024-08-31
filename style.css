@@ -2315,7 +2315,6 @@ section p {
 
 
 
-
 .find-center-section {
     background-image: url('green.jpg');
     background-size: cover; 
@@ -2384,19 +2383,41 @@ section p {
 
 .location-item:hover .location-dropdown {
     display: block;
-    animation: slideDown 0.5s ease-out forwards, fadeIn 0.5s ease-out forwards;
+    animation: slideInFromLeft 0.5s ease-out forwards, fadeIn 0.5s ease-out forwards;
 }
 
-/* Keyframes for sliding down */
-@keyframes slideDown {
+/* Slide in from left */
+@keyframes slideInFromLeft {
     0% {
-        transform: translateY(-10%);
+        transform: translateX(-100%);
         opacity: 0;
     }
     100% {
-        transform: translateY(0);
+        transform: translateX(0);
         opacity: 1;
     }
+}
+
+/* Slide in from right */
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Apply slideInFromRight for even children */
+.location-item:nth-child(even):hover .location-dropdown {
+    animation: slideInFromRight 0.5s ease-out forwards, fadeIn 0.5s ease-out forwards;
+}
+
+/* Apply slideInFromLeft for odd children */
+.location-item:nth-child(odd):hover .location-dropdown {
+    animation: slideInFromLeft 0.5s ease-out forwards, fadeIn 0.5s ease-out forwards;
 }
 
 /* Keyframes for fading in */
@@ -2450,6 +2471,7 @@ section p {
         padding: 5px; /* Keep padding consistent */
     }
 }
+
 
 
 
