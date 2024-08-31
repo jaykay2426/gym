@@ -410,6 +410,7 @@
         flex-direction: column;
         margin-left: 10px;
         width: 95%;
+        box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.349);
         box-shadow: none;
         padding: 10px;
     }
