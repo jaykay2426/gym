@@ -228,7 +228,7 @@
 
 .container {
     display: flex;
-    background-color: white;
+    background-color: gold;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.349);
