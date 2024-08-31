@@ -2381,6 +2381,33 @@ section p {
     border-radius: 5px;
 }
 
+.location-item:hover .location-dropdown {
+    display: block;
+    animation: slideDown 0.5s ease-out forwards, fadeIn 0.5s ease-out forwards;
+}
+
+/* Keyframes for sliding down */
+@keyframes slideDown {
+    0% {
+        transform: translateY(-10%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Keyframes for fading in */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 @media (max-width: 768px) {
     .find-center-section {
         padding: 20px; /* Reduce padding */
@@ -2422,6 +2449,7 @@ section p {
         padding: 5px; /* Keep padding consistent */
     }
 }
+
 
 
 
