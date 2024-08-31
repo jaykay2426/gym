@@ -238,7 +238,7 @@
     width: 90%;
 }
 .image-section img {
-    width: 100%;
+    width: 95%;
     height: auto;
 }
 .content-section {
@@ -295,7 +295,7 @@
         width: 90%;
     }
     .image-section img {
-        width: 100%;
+        width: 95%;
         height: auto;
     }
     .content-section {
@@ -353,7 +353,7 @@
         width: 85%; /* Slightly adjusted width for larger screens */
     }
     .image-section img {
-        width: 100%;
+        width: 95%;
         height: auto;
     }
     .content-section {
@@ -405,7 +405,7 @@
         padding: 10px;          /* Optional: Add padding if needed */
     }
     .image-section img {
-        width: 100%;
+        width: 95%;
         height: auto;
     }
     .content-section {
@@ -438,6 +438,48 @@
     }
 }
 
+
+/* Define keyframes for sliding from the left */
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Define keyframes for sliding from the right */
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Apply animations to divs */
+.icon-item:nth-child(odd) {
+    animation: slideInFromLeft 1s ease-out forwards;
+}
+
+.icon-item:nth-child(even) {
+    animation: slideInFromRight 1s ease-out forwards;
+}
+
+/* Optional: Add a slight delay to create a staggered effect */
+.icon-item:nth-child(odd) {
+    animation-delay: 0.5s;
+}
+
+.icon-item:nth-child(even) {
+    animation-delay: 0.7s;
+}
 
 
 
