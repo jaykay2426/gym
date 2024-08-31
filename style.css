@@ -2699,3 +2699,116 @@ section p {
         animation: zoomIn 1.2s ease, slideInLeft 0.8s ease;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#gym-location {
+    padding: 50px;
+    margin-top: 100px;
+}
+
+#gym-location .content-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: row; /* Row direction for larger screens */
+}
+
+#gym-location iframe {
+    flex: 1;
+    width: 100%;
+    height: 450px;
+    border: 0;
+}
+
+#gym-location .details {
+    flex: 1;
+    padding-left: 20px;
+}
+
+#gym-location h2 {
+    color: green;
+    font-size: 24px;
+}
+
+#gym-location h3 {
+    color: green;
+    font-size: 32px;
+}
+
+#gym-location p {
+    font-size: 18px;
+}
+
+/* For medium screens (min-width: 769px) */
+@media (min-width: 769px) {
+    #gym-location .content-wrapper {
+        flex-direction: row; /* Maintain row layout for medium screens */
+    }
+}
+
+/* For larger screens (min-width: 1024px) */
+@media (min-width: 1024px) {
+    #gym-location .content-wrapper {
+        flex-direction: row; /* Maintain row layout for larger screens */
+    }
+
+    #gym-location h2 {
+        font-size: 28px; /* Larger font size for heading */
+    }
+
+    #gym-location h3 {
+        font-size: 36px; /* Larger font size for subheading */
+    }
+
+    #gym-location p {
+        font-size: 20px; /* Larger font size for paragraphs */
+    }
+}
+
+/* For small screens (max-width: 480px) */
+@media (max-width: 480px) {
+    #gym-location {
+        padding: 20px; /* Reduce padding for small screens */
+    }
+
+    #gym-location .content-wrapper {
+        flex-direction: column; /* Stack map on top and details below */
+    }
+
+    #gym-location iframe {
+        width: 100%; /* Full width for the map */
+        height: 300px; /* Adjust height to fit smaller screens */
+    }
+
+    #gym-location .details {
+        padding-left: 0; /* Remove left padding for small screens */
+        margin-top: 20px; /* Add margin to separate map and details */
+    }
+
+    #gym-location h2 {
+        font-size: 20px; /* Smaller font size for heading */
+    }
+
+    #gym-location h3 {
+        font-size: 26px; /* Smaller font size for subheading */
+    }
+
+    #gym-location p {
+        font-size: 16px; /* Smaller font size for paragraphs */
+    }
+}
