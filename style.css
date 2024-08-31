@@ -282,18 +282,16 @@
 
 @media (min-width: 769px) {
     .container {
-        display: flex;
-        background-color: white;
-        border-radius: 8px;
-        overflow: hidden;
-        box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.349);
-        max-width: 1500px;
-        margin-left: auto; /* Changed from fixed margin to auto for better centering */
-        margin-right: auto; /* Added this to ensure centering */
-        align-content: center;
-        align-items: center;
-        width: 90%;
-    }
+    display: flex;
+    background-color: gold;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.349);
+    max-width: 1500px;
+    align-content: center;
+    align-items: center;
+    width: 90%;
+}
     .image-section img {
         width: 100%;
         height: auto;
