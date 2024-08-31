@@ -289,12 +289,12 @@
         overflow: hidden;
         box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.349);
         max-width: 1500px;
-        margin-left: auto; /* Changed from fixed margin to auto for better centering */
+        margin-left: -150px; /* Changed from fixed margin to auto for better centering */
         margin-right: auto; /* Added this to ensure centering */
         align-content: center;
         align-items: center;
         width: 90%;
-        margin-bottom: 100px;
+        margin-bottom: 150px;
     }
     .image-section img {
         width: 100%;
@@ -621,12 +621,14 @@
         width: 80%; /* Adjusted width */
         max-width: 200px; /* Ensured maximum width */
         margin-right: 0;
+        display: none;
         margin-top: 1rem; /* Adjusted top margin */
     }
 
     .social-icons a {
         font-size: 1.5rem; /* Adjusted font size */
         padding: 0.4rem;
+        margin-bottom: -50px;
     }
 
     .btn-group {
