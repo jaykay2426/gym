@@ -234,7 +234,7 @@
     box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.349);
     max-width: 1500px;
     align-content: center;
-    margin-left: 50px;
+    margin-left: 20px;
     align-items: center;
     width: 90%;
 }
@@ -273,11 +273,11 @@
     flex: 1;
 }
 .icon-item h4 {
-    font-size: 26px;
+    font-size: 20px;
     margin-bottom: 5px;
 }
 .icon-item p {
-    font-size: 4px;
+    font-size: 13px;
     color: #555;
 }
 
