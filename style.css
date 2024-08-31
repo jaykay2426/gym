@@ -234,6 +234,7 @@
     box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.349);
     max-width: 1500px;
     align-content: center;
+    margin-left: 50px;
     align-items: center;
     width: 90%;
 }
@@ -289,6 +290,7 @@
     box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.349);
     max-width: 1500px;
     align-content: center;
+    margin-left: 50px;
     align-items: center;
     width: 90%;
 }
