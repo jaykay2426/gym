@@ -39,10 +39,9 @@ window.addEventListener('scroll', function() {
     scrollAlert.classList.toggle('visible', window.scrollY > 500);
 });
 
-document.getElementById('menu-icon').addEventListener('click', function() {
-    const navbar = document.getElementById('navbar');
-    navbar.classList.toggle('active');
-});
+
+
+
 
 // Typing animation for the home section
 const typingText = document.querySelector('.typing-text span');
@@ -71,9 +70,24 @@ function erase() {
     }
 }
 
+
+
+
+
+
+
+
 document.addEventListener('DOMContentLoaded', function() {
     type();
 });
+
+
+
+
+
+
+
+
 
 // Reveal elements on scroll
 const revealElements = document.querySelectorAll('.reveal');
@@ -258,15 +272,6 @@ function toggleDropdown(id) {
 
 
 
-
-
-
-
-
-
-
-
-
 const slides = document.querySelectorAll('.slide');
 const prevBtn = document.querySelector('.prev');
 const nextBtn = document.querySelector('.next');
@@ -309,29 +314,55 @@ setInterval(nextSlide, 5000);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 document.addEventListener('DOMContentLoaded', function() {
     const menuIcon = document.getElementById('menu-icon');
-    const closeIcon = document.querySelector('.close-icon');
     const navbar = document.getElementById('navbar');
+    const closeIcon = document.querySelector('.close-icon');
 
-    menuIcon.addEventListener('click', function() {
-        navbar.classList.add('active');
+    menuIcon.addEventListener('click', function(event) {
+        event.stopPropagation(); // Prevents immediate closing when clicking menu icon
+        navbar.classList.toggle('active');
+        menuIcon.classList.toggle('fa-times');
     });
 
     closeIcon.addEventListener('click', function() {
         navbar.classList.remove('active');
+        menuIcon.classList.remove('fa-times');
     });
+
+    // Close navbar when clicking outside
+    document.addEventListener('click', function(event) {
+        if (!navbar.contains(event.target) && !menuIcon.contains(event.target)) {
+            navbar.classList.remove('active');
+            menuIcon.classList.remove('fa-times');
+        }
+    });
+});
+
+
+
+
+
+// Dark mode toggle
+const toggleIcon = document.getElementById('toggle-icon');
+const body = document.body;
+
+// Load saved theme
+const currentTheme = localStorage.getItem('theme');
+if (currentTheme) {
+    body.classList.add(currentTheme);
+    if (currentTheme === 'dark-mode') {
+        toggleIcon.classList.replace('fa-sun', 'fa-moon');
+    }
+}
+
+toggleIcon.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    if (body.classList.contains('dark-mode')) {
+        toggleIcon.classList.replace('fa-sun', 'fa-moon');
+        localStorage.setItem('theme', 'dark-mode');
+    } else {
+        toggleIcon.classList.replace('fa-moon', 'fa-sun');
+        localStorage.setItem('theme', 'light-mode');
+    }
 });
