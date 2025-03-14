@@ -527,7 +527,7 @@
     align-items: center;
     justify-content: center;
     gap: 5rem;
-    height: 1000px;
+    height: 1200px;
 }
 
 .home-content {
@@ -613,6 +613,11 @@
     box-shadow: 0 0 25px green, 0 0 50px green, 0 0 100px green;
 }
 
+.social-icons{
+    margin-top: -30px;
+    margin-left: 50px;
+}
+
 .social-icons a {
     display: inline-flex;
     justify-content: center;
@@ -636,63 +641,31 @@
 
 .btn-group {
     display: flex;
-    gap: 1.5rem;
+    justify-content: center; /* Centers buttons */
+    align-items: center;
+    gap: 1rem; /* Adjust spacing */
+    flex-wrap: wrap;
+    margin-top: 40px;
 }
 
 .btn {
-    display: inline-block;
-    padding: 2rem 5rem;
-    background: green;
-    box-shadow: 0 0 25px black;
-    border-radius: 3rem;
-    font-size: 1.8rem;
-    color: black;
-    border: 2px solid black;
-    transition: all 0.3s ease-in-out;
-    position: relative;
-    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 30px;
+}
+
+.btn-group a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .btn:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 25px green, 0 0 50px green, 0 0 100px green;
+    box-shadow: 0 0 15px green, 0 0 30px green;
 }
 
-.btn::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.5), transparent);
-    opacity: 0;
-    transition: all 0.6s ease-in-out;
-}
-
-.btn:hover::before {
-    top: 0;
-    left: 0;
-    opacity: 1;
-    transform: scale(1);
-}
-
-.btn-group a:nth-of-type(2) {
-    background-color: green;
-    color: black;
-    font-size: 19px;
-    padding: 8px;
-    border-radius: 130px;
-    border: 2px solid black;
-    box-shadow: 0 0 25px transparent;
-    transition: all 0.3s ease-in-out;
-}
-
-.btn-group a:nth-of-type(2):hover {
-    box-shadow: 0 0 25px green;
-    background-color: white;
-    color: black;
-}
 
 .hero {
     position: relative;
