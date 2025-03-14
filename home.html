@@ -7,13 +7,62 @@
     <script src="https://kit.fontawesome.com/fbf15e9077.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        
+body.dark-mode {
+    background-color: #121212;
+    color: #f5f5f5;
+}
+
+.dark-mode .header, .dark-mode .navbar a {
+    background-color: #1e1e1e;
+    color: #f5f5f5;
+}
+
+.dark-mode .find-center-section, .dark-mode .container, .dark-mode .home, .dark-mode .classes, .dark-mode .facilities, .dark-mode .bmi-calculator-sec, .dark-mode .membership, .dark-mode .gym-features, .dark-mode .footer {
+    background-color: #1e1e1e;
+}
+
+.dark-mode .card {
+    background-color: #2a2a2a;
+    color: #f5f5f5;
+}
+
+.dark-mode .icon-section .icon-item i, .dark-mode .features-list li i {
+    color: #f39c12;
+}
+
+.dark-mode .btn-group a, .dark-mode .join-now-btn, .dark-mode .member-btn {
+    background-color: #f39c12;
+    color: #000;
+}
+
+/* Toggle button */
+.dark-mode-toggle {
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin-left: auto;
+}
+
+#toggle-icon {
+    font-size: 24px;
+    color: #f39c12;
+}
+
+/* When dark mode is active, change the icon */
+body.dark-mode #toggle-icon {
+    color: #f1c40f;
+}
+
+    </style>
 </head>
 <body>
     <header class="header">
         <a href="index.html"><img src="gymback.avif" class="logo" alt="Gym Logo"></a>
-
+    
         <i class="fas fa-bars" id="menu-icon"></i>
-
+    
         <nav class="navbar" id="navbar">
             <a href="index.html">Home</a>
             <a href="membership.html">Membership</a>
@@ -23,12 +72,15 @@
             <a href="Newsletter.html">Newsletter</a>
             <a href="deals.html">Deals</a>
         </nav>
+    
+        <!-- Dark mode toggle switch -->
+        <div class="dark-mode-toggle">
+            <i class="fas fa-sun" id="toggle-icon"></i>
+        </div>
     </header>
+    
 
 
-    <div class="scroll-alert" id="scroll-alert">
-        <p>OUR GOAL: To provide a welcoming and motivating environment where individuals of all fitness levels can achieve their health and wellness goals. Join us and become part of our fitness community today at an affordable price!</p>
-    </div>
 
 
     <div class="find-center-section">
@@ -58,9 +110,9 @@
                 <button class="dropbtn" onclick="toggleDropdown('ph-dropdown')">PORT HARCOURT</button>
                 <div class="location-dropdown" id="ph-dropdown">
                     <ul>
-                        <li>Trans Amadi</li>
-                        <li>GRA</li>
-                        <li>Rumuola</li>
+                        <a href="gbagada.html"><li>Trans Amadi</li></a>
+                        <a href="gbagada.html"><li>GRA</li></a>
+                        <a href="gbagada.html"><li>Rumuola</li></a>
                     </ul>
                 </div>
             </div>
@@ -68,9 +120,9 @@
                 <button class="dropbtn" onclick="toggleDropdown('ibadan-dropdown')">IBADAN</button>
                 <div class="location-dropdown" id="ibadan-dropdown">
                     <ul>
-                        <li>Ring Road</li>
-                        <li>Bodija</li>
-                        <li>Dugbe</li>
+                        <a href="gbagada.html"><li>Ring Road</li></a>
+                        <a href="gbagada.html"><li>Bodija</li></a>
+                        <a href="gbagada.html"><li>Dugbe</li></a>
                     </ul>
                 </div>
             </div>
@@ -82,7 +134,7 @@
             <img src="gym11.avif" alt="Fitness Class Image">
         </div>
         <div class="content-section">
-            <h2>Why i-Fitness</h2>
+            <h2>Why Collective Fitness</h2>
             <p>Unique Experiences Tailored To Your Lifestyle</p>
             <div class="icon-section">
                 <div class="icon-item">
@@ -118,7 +170,9 @@
 
                 Our mission is to empower individuals through fitness, offering state-of-the-art equipment, expert trainers, and a supportive environment. Whether you're a beginner or a seasoned athlete, we strive to help you reach your potential.
 
-                Thank you for visiting Collective Gym. We look forward to helping you on your fitness journey. Together, let's achieve greatness.
+                From personalized training programs to a variety of group classes, we're here to help you every step of the way. Join us as we work together to make your fitness dreams a reality.
+
+                Thank you for visiting Collective Gym. We look forward to helping you on your fitness journey. Feel free to explore our website, sign up for a membership, or contact us with any questions. Together, let's achieve greatness.
             </p>
             <div class="social-icons">
                 <a href="https://github.com/jaykay2-4">
@@ -140,7 +194,7 @@
     
             <div class="btn-group">
                 <a href="#contact" class="btn">Hire</a>
-                <a href="contact.html">Contact</a>
+                <a href="contact.html" class="btn">Contact</a>
             </div>
         </div>
         <div class="home-img">
@@ -160,35 +214,35 @@
                 <h3>Yoga</h3>
                 <img src="yoga.webp" alt="Yoga Class" class="class-img">
                 <p class="class-description">Relax and stretch with our yoga classes, suitable for all levels.</p>
-                <a href="#" class="join-now-btn">Explore</a>
+                <a href="classes.html" class="join-now-btn">Explore</a>
             </div>
 
             <div class="card reveal">
                 <h3>HIIT</h3>
                 <img src="HIIIT.webp" alt="HIIT Class" class="class-img">
                 <p class="class-description">High-Intensity Interval Training to burn calories and build strength.</p>
-                <a href="#" class="join-now-btn">Explore</a>
+                <a href="classes.html" class="join-now-btn">Explore</a>
             </div>
 
             <div class="card reveal">
                 <h3>Zumba</h3>
                 <img src="ZUMBA.webp" alt="Zumba Class" class="class-img">
                 <p class="class-description">Dance your way to fitness with our fun and energetic Zumba classes.</p>
-                <a href="#" class="join-now-btn">Explore</a>
+                <a href="classes.html" class="join-now-btn">Explore</a>
             </div>
 
             <div class="card reveal">
                 <h3>Pilates</h3>
                 <img src="pilates.webp" alt="Pilates Class" class="class-img">
                 <p class="class-description">Strengthen your core and improve flexibility with Pilates.</p>
-                <a href="#" class="join-now-btn">Explore</a>
+                <a href="classes.html" class="join-now-btn">Explore</a>
             </div>
 
             <div class="card reveal">
                 <h3>Spinning</h3>
                 <img src="spinning.webp" alt="Spinning Class" class="class-img">
                 <p class="class-description">Get your heart pumping with our high-energy spinning sessions.</p>
-                <a href="" class="join-now-btn">Explore</a>
+                <a href="cl" class="join-now-btn">Explore</a>
             </div>
         </div>
     </section>
